@@ -20,6 +20,9 @@ const mutations = {
   },
   decrement (state) {
     state.count--
+  },
+  addtwo (state) {
+    state.count += 2
   }
 }
 
@@ -40,7 +43,8 @@ const actions = {
         resolve()
       }, 1000)
     })
-  }
+  },
+  addtwo: ({ commit }) => commit('addtwo')
 }
 
 // getters are functions
